@@ -1,0 +1,102 @@
+/* mystyle.css */
+
+/* Base Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    overflow: hidden;
+    cursor: url('image/scaner.png'), auto;
+  }
+  
+  .mart-background {
+    background: url('/image/mart.png') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .fruit {
+    position: absolute;
+    cursor: pointer;
+    /* 이미지 크기를 부모 요소의 80%로 설정 (조절 가능) */
+    max-width: 12%;
+    max-height: 12%;
+  }
+  
+  /* Fruit Positioning */
+  .potato { top: 63%; left: 26%; }
+  .apple { top: 34%; left: 30%; }
+  .blueberry { top: 38%; left: 50%; }
+  .sogogi { top: 63%; left: 35%; }
+  .banana { top: 35%; left: 39%; }
+  .avocado { top: 34%; left: 58%; }
+  .rice { top: 62%; left: 62%; }
+  .coffee { top: 63%; left: 44%; }
+  .yangpa { top: 62%; left: 54%; }
+  
+  /* ... Rest of your CSS ... */
+  
+  /* Media Query for Larger Screens */
+  @media (min-width: 768px) {
+    .fruit {
+      /* Adjust size as needed for larger screens */
+      width: 25%;
+    }
+  }
+  
+  /* 전단지 스타일 */
+  .flyer {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    width: 80%;
+    max-width: 1700px;
+  }
+  
+  .flyer > img:first-child { /* 전단지 이미지 */
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .flyer .close-btn {
+    position: absolute;
+    top: 320px;
+    right: 54px;
+    width: 50px !important;
+    height: 50px !important;
+    cursor: pointer;
+    z-index: 11;
+    object-fit: contain;
+  
+    /* 마우스 호버 시 크기 조절 */
+    transition: transform 0.2s ease-in-out; /* 부드러운 전환 효과 */
+    transform: scale(1); /* 기본 크기 */
+  }
+  
+  &:hover {
+    transform: scale(1.1); /* 10% 확대 */
+  }
+  
+  .fruit:hover {
+    transform: rotate(5deg);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+/* Media Query for Larger Screens */
+
+  
+    /* Other adjustments as needed */
